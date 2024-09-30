@@ -124,7 +124,7 @@ namespace GrabbedRandomizer
             }
 
             await BNLDecompress(scriptDirectory + "ghoulies_chapter1_scene1_2playcam.bnl");
-            await BNLDecompress(scriptDirectory + "ghoulies_chapter3a_scene2_1playcam.bnl");
+            await BNLDecompress(scriptDirectory + "ghoulies_chapter3a_scene1_3playcam.bnl");
 
             //PopulateGroups();
 
@@ -178,6 +178,10 @@ namespace GrabbedRandomizer
                 }
             }
 
+            
+            stages.Clear();
+            allFiles.Clear();
+
 
         }
 
@@ -211,45 +215,45 @@ namespace GrabbedRandomizer
         public void PopulateGroups()
         {
             string str = "Skeleton";
-                decompressLabel.Text = $"Populating: {str}";
-                string stru = str.ToLower();
-                List<StageFile> all;
-                switch (stru)
+            decompressLabel.Text = $"Populating: {str}";
+            string stru = str.ToLower();
+            List<StageFile> all;
+            switch (stru)
+            {
+                case "imp":
+                    all = allFiles.Where(c => c.name.Contains(stru) && !c.name.Contains("impninja") && !c.name.Contains("impfire") && !c.name.Contains("impact")).ToList();
+                    break;
+
+                case "mummy":
+                    all = allFiles.Where(c => c.name.Contains(stru) && !c.name.Contains("mummycursed")).ToList();
+                    break;
+
+                case "chicken":
+                    all = allFiles.Where(c => c.name.Contains(stru) && !c.name.Contains("chickenvampire")).ToList();
+                    break;
+
+                case "vampire":
+                    all = allFiles.Where(c => c.name.Contains(stru) && !c.name.Contains("chickenvampire")).ToList();
+                    break;
+
+                default:
+                    all = allFiles.Where(c => c.name.Contains(stru)).ToList();
+                    break;
+
+            }
+            string[] strs = allFiles.Where(c => all.Where(d => d == c).ToArray().Length == 0).Select(e => e.name).ToArray();
+            foreach (StageFile file in all.ToList())
+            {
+                foreach (string str2 in strs)
                 {
-                    case "imp":
-                        all = allFiles.Where(c => c.name.Contains(stru) && !c.name.Contains("impninja") && !c.name.Contains("impfire") && !c.name.Contains("impact")).ToList();
-                        break;
-
-                    case "mummy":
-                        all = allFiles.Where(c => c.name.Contains(stru) && !c.name.Contains("mummycursed")).ToList();
-                        break;
-
-                    case "chicken":
-                        all = allFiles.Where(c => c.name.Contains(stru) && !c.name.Contains("chickenvampire")).ToList();
-                        break;
-
-                    case "vampire":
-                        all = allFiles.Where(c => c.name.Contains(stru) && !c.name.Contains("chickenvampire")).ToList();
-                        break;
-
-                    default:
-                        all = allFiles.Where(c => c.name.Contains(stru)).ToList();
-                        break;
-
-                }
-                string[] strs = allFiles.Where(c => all.Where(d => d == c).ToArray().Length == 0).Select(e => e.name).ToArray();
-                foreach (StageFile file in all.ToList())
-                {
-                    foreach (string str2 in strs)
+                    if (ContainsMultiLineStringInFileStream(new FileStream(file.path, FileMode.Open, FileAccess.ReadWrite, FileShare.None, bufferSize: 4096, useAsync: true), str2))
                     {
-                        if (ContainsMultiLineStringInFileStream(new FileStream(file.path, FileMode.Open, FileAccess.ReadWrite, FileShare.None, bufferSize: 4096, useAsync: true), str2))
-                        {
-                            Debug.WriteLine(str2);
-                            all.Add(allFiles.First(c => c.name == str2));
-                        }
+                        Debug.WriteLine(str2);
+                        all.Add(allFiles.First(c => c.name == str2));
                     }
                 }
-                groups.Add(new FileGroup(str, all));
+            }
+            groups.Add(new FileGroup(str, all));
 
             foreach (FileGroup group in groups)
             {
@@ -310,11 +314,11 @@ namespace GrabbedRandomizer
                 await file.ReadAsync(temp, 0, 128);
                 temp = FilterNullBytes(temp);
                 string name = Encoding.UTF8.GetString(temp);
-                if(allFiles.Where(c => c.name == name).ToList().Count != 0)
+                if (allFiles.Where(c => c.name == name).ToList().Count != 0)
                 {
                     StageFile sf = allFiles.First(c => c.name == name);
                     File.Copy(sf.path, newDir + name + ".info");
-                    if(sf.data)
+                    if (sf.data)
                     {
                         File.Copy(sf.path.Substring(0, sf.path.Length - 5) + ".data", newDir + name + ".data");
                     }
@@ -331,9 +335,9 @@ namespace GrabbedRandomizer
                 StageFile stageFile = new StageFile();
                 stageFile.header = fileHeader;
                 stageFile.name = name;
-                foreach(string str in groupsTypes)
+                foreach (string str in groupsTypes)
                 {
-                    if(name.Contains(str.ToLower()) && !stage.enemies.Contains(str))
+                    if (name.Contains(str.ToLower()) && !stage.enemies.Contains(str))
                     {
                         int index = name.IndexOf(str.ToLower());
                         if (name.Length == index + str.Length)
@@ -456,7 +460,6 @@ namespace GrabbedRandomizer
 
         public void BNLCompress(Stage stage)
         {
-            ReplaceMonster(stage.outputFolder, "Imp", "HauntedTv");
             FileStream compressed = File.Create(stage.name.Substring(0, stage.name.Length - 4) + ".recom");
             string[] files = Directory.GetFiles(stage.outputFolder, "*.*", SearchOption.AllDirectories);
             Array.Sort(files);
@@ -616,9 +619,13 @@ namespace GrabbedRandomizer
             PythonEngine.Shutdown();
         }
 
-        private void CompressButton_Click(object sender, EventArgs e)
+        private async void CompressButton_Click(object sender, EventArgs e)
         {
+            await BNLDecompress(scriptDirectory + "ghoulies_chapter1_scene1_2playcam.bnl");
+            await BNLDecompress(scriptDirectory + "ghoulies_chapter3a_scene1_3playcam.bnl");
             BNLCompress(stages[0]);
+            Cleanup(scriptDirectory);
+            await XISOManager("-c", Environment.CurrentDirectory + "/grabbed_extracted");
         }
     }
 }

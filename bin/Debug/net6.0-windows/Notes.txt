@@ -1,0 +1,4 @@
+Marker:
+-Level transitions in here
+-Stage objects are not in here
+-Doors and bramble are not in here

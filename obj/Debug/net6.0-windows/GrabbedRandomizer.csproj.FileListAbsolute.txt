@@ -38,3 +38,4 @@ H:\GhidraProjects\GrabbedRandomizer\GrabbedRandomizer\obj\Debug\net6.0-windows\G
 H:\GhidraProjects\GrabbedRandomizer\GrabbedRandomizer\obj\Debug\net6.0-windows\ref\GrabbedRandomizer.dll
 H:\GhidraProjects\GrabbedRandomizer\GrabbedRandomizer\bin\Debug\net6.0-windows\zlibnet.dll
 H:\GhidraProjects\GrabbedRandomizer\GrabbedRandomizer\bin\Debug\net6.0-windows\Python.Runtime.dll
+H:\GhidraProjects\GrabbedRandomizer\GrabbedRandomizer\obj\Debug\net6.0-windows\GrabbedRandomizer.sourcelink.json
