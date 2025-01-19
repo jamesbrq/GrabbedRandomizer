@@ -1,0 +1,90 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "H:\\GhidraProjects\\GrabbedRandomizer\\GrabbedRandomizer\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1C4A1A25-B864-46B4-9C34-BFE603990106}|GrabbedRandomizer.csproj|h:\\ghidraprojects\\grabbedrandomizer\\grabbedrandomizer\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C4A1A25-B864-46B4-9C34-BFE603990106}|GrabbedRandomizer.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C4A1A25-B864-46B4-9C34-BFE603990106}|GrabbedRandomizer.csproj|H:\\GhidraProjects\\GrabbedRandomizer\\GrabbedRandomizer\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1C4A1A25-B864-46B4-9C34-BFE603990106}|GrabbedRandomizer.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C4A1A25-B864-46B4-9C34-BFE603990106}|GrabbedRandomizer.csproj|h:\\ghidraprojects\\grabbedrandomizer\\grabbedrandomizer\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C4A1A25-B864-46B4-9C34-BFE603990106}|GrabbedRandomizer.csproj|solutionrelative:form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C4A1A25-B864-46B4-9C34-BFE603990106}|GrabbedRandomizer.csproj|h:\\ghidraprojects\\grabbedrandomizer\\grabbedrandomizer\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C4A1A25-B864-46B4-9C34-BFE603990106}|GrabbedRandomizer.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "H:\\GhidraProjects\\GrabbedRandomizer\\GrabbedRandomizer\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "Form1.Designer.cs",
+              "ToolTip": "H:\\GhidraProjects\\GrabbedRandomizer\\GrabbedRandomizer\\Form1.Designer.cs",
+              "RelativeToolTip": "Form1.Designer.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAUwD8AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-29T08:51:26.015Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "H:\\GhidraProjects\\GrabbedRandomizer\\GrabbedRandomizer\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "H:\\GhidraProjects\\GrabbedRandomizer\\GrabbedRandomizer\\Form1.cs [Design]",
+              "RelativeToolTip": "Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-29T08:49:48.462Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "H:\\GhidraProjects\\GrabbedRandomizer\\GrabbedRandomizer\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "H:\\GhidraProjects\\GrabbedRandomizer\\GrabbedRandomizer\\Form1.cs",
+              "RelativeToolTip": "Form1.cs",
+              "ViewState": "AgIAAF8CAAAAAAAAAIA3wG4CAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-29T08:48:47.65Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "H:\\GhidraProjects\\GrabbedRandomizer\\GrabbedRandomizer\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "H:\\GhidraProjects\\GrabbedRandomizer\\GrabbedRandomizer\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-29T08:48:21.957Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

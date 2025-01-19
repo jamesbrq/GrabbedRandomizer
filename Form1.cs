@@ -124,7 +124,7 @@ namespace GrabbedRandomizer
             }
 
             await BNLDecompress(scriptDirectory + "ghoulies_chapter1_scene1_2playcam.bnl");
-            await BNLDecompress(scriptDirectory + "ghoulies_chapter3a_scene1_3playcam.bnl");
+            await BNLDecompress(scriptDirectory + "ghoulies_chapter1_scene7_3playcam.bnl");
 
             //PopulateGroups();
 
@@ -317,6 +317,8 @@ namespace GrabbedRandomizer
                 if (allFiles.Where(c => c.name == name).ToList().Count != 0)
                 {
                     StageFile sf = allFiles.First(c => c.name == name);
+                    if (File.Exists(newDir + name + ".info"))
+                        continue;
                     File.Copy(sf.path, newDir + name + ".info");
                     if (sf.data)
                     {
@@ -460,6 +462,7 @@ namespace GrabbedRandomizer
 
         public void BNLCompress(Stage stage)
         {
+            ReplaceMonster(stage.outputFolder, "Imp", "HauntedTv");
             FileStream compressed = File.Create(stage.name.Substring(0, stage.name.Length - 4) + ".recom");
             string[] files = Directory.GetFiles(stage.outputFolder, "*.*", SearchOption.AllDirectories);
             Array.Sort(files);
@@ -622,7 +625,7 @@ namespace GrabbedRandomizer
         private async void CompressButton_Click(object sender, EventArgs e)
         {
             await BNLDecompress(scriptDirectory + "ghoulies_chapter1_scene1_2playcam.bnl");
-            await BNLDecompress(scriptDirectory + "ghoulies_chapter3a_scene1_3playcam.bnl");
+            await BNLDecompress(scriptDirectory + "ghoulies_chapter1_scene7_3playcam.bnl");
             BNLCompress(stages[0]);
             Cleanup(scriptDirectory);
             await XISOManager("-c", Environment.CurrentDirectory + "/grabbed_extracted");
