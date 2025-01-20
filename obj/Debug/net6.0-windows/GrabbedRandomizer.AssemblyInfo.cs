@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GrabbedRandomizer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cda31269c535af50fec6e363a43b7ea64ed086a0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aa94445b531296d8bf7f5b22acb4f5ad4c52b876")]
 [assembly: System.Reflection.AssemblyProductAttribute("GrabbedRandomizer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GrabbedRandomizer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

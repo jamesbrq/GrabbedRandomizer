@@ -15,6 +15,136 @@ namespace GrabbedRandomizer
         public FileTypes fileTypes = new FileTypes();
         public List<FileGroup> groups = new List<FileGroup>();
 
+        public List<string> fileNames = new List<string>
+        {
+            /*"ghoulies_challenges_amberwantsakiss.bnl",
+            "ghoulies_challenges_atouchoffrost.bnl",
+            "ghoulies_challenges_bedtimegory.bnl",
+            "ghoulies_challenges_bringouttheimps.bnl",
+            "ghoulies_challenges_chopsockywhacky.bnl",
+            "ghoulies_challenges_dirtylaundry.bnl",
+            "ghoulies_challenges_discodivas.bnl",
+            "ghoulies_challenges_heybigswinger.bnl",
+            "ghoulies_challenges_kickemquick.bnl",
+            "ghoulies_challenges_meetthereaper.bnl",
+            "ghoulies_challenges_mindthepots.bnl",
+            "ghoulies_challenges_originalvideo.bnl",
+            "ghoulies_challenges_protectfiddler.bnl",
+            "ghoulies_challenges_scaredyspiders.bnl",
+            "ghoulies_challenges_smashthestudybuddy.bnl",
+            "ghoulies_challenges_snookerskeletons.bnl",
+            "ghoulies_challenges_soakazombie.bnl",
+            "ghoulies_challenges_superdupershock.bnl",
+            "ghoulies_challenges_takeoutthetrash.bnl",
+            "ghoulies_challenges_whosthedaddy.bnl",
+            "ghoulies_challenges_whosthedaddyagain.bnl",*/
+            "ghoulies_chapter1_scene10_1playcam.bnl",
+            "ghoulies_chapter1_scene11_3viewcam.bnl",
+            "ghoulies_chapter1_scene12_1playcam.bnl",
+            "ghoulies_chapter1_scene1_2playcam.bnl",
+            "ghoulies_chapter1_scene2_1viewcam.bnl",
+            "ghoulies_chapter1_scene3_1playcam.bnl",
+            "ghoulies_chapter1_scene4_2playcam.bnl",
+            "ghoulies_chapter1_scene5_1playcam.bnl",
+            "ghoulies_chapter1_scene6_1playcam.bnl",
+            "ghoulies_chapter1_scene7_1playcam.bnl",
+            "ghoulies_chapter1_scene7_3playcam.bnl",
+            "ghoulies_chapter1_scene8_1playcam.bnl",
+            "ghoulies_chapter1_scene9_1playcam.bnl",
+            "ghoulies_chapter2a_scene10_1playcam.bnl",
+            "ghoulies_chapter2a_scene11_1playcam.bnl",
+            "ghoulies_chapter2a_scene12_2playcam.bnl",
+            "ghoulies_chapter2a_scene13_2playcam.bnl",
+            "ghoulies_chapter2a_scene14_1playcam.bnl",
+            "ghoulies_chapter2a_scene15_1playcam.bnl",
+            "ghoulies_chapter2a_scene16_1playcam.bnl",
+            "ghoulies_chapter2a_scene17_1playcam.bnl",
+            "ghoulies_chapter2a_scene1_1playcam.bnl",
+            "ghoulies_chapter2a_scene1_3playcam.bnl",
+            "ghoulies_chapter2a_scene2_1playcam.bnl",
+            "ghoulies_chapter2a_scene3_1playcam.bnl",
+            "ghoulies_chapter2a_scene4_2playcam.bnl",
+            "ghoulies_chapter2a_scene5_1playcam.bnl",
+            "ghoulies_chapter2a_scene6_2playcam.bnl",
+            "ghoulies_chapter2a_scene7_2playcam.bnl",
+            "ghoulies_chapter2a_scene8_1playcam.bnl",
+            "ghoulies_chapter2a_scene9_1playcam.bnl",
+            "ghoulies_chapter2b_scene10_1playcam.bnl",
+            "ghoulies_chapter2b_scene1_1playcam.bnl",
+            "ghoulies_chapter2b_scene2_1playcam.bnl",
+            "ghoulies_chapter2b_scene3_2playcam.bnl",
+            "ghoulies_chapter2b_scene4_1playcam.bnl",
+            "ghoulies_chapter2b_scene5_1playcam.bnl",
+            "ghoulies_chapter2b_scene6_2playcam.bnl",
+            "ghoulies_chapter2b_scene7_1playcam.bnl",
+            "ghoulies_chapter2b_scene8_1playcam.bnl",
+            "ghoulies_chapter2b_scene9_1playcam.bnl",
+            "ghoulies_chapter2c_scene10_1playcam.bnl",
+            "ghoulies_chapter2c_scene11_1playcam.bnl",
+            "ghoulies_chapter2c_scene12_1playcam.bnl",
+            "ghoulies_chapter2c_scene13_2playcam.bnl",
+            "ghoulies_chapter2c_scene1_1playcam.bnl",
+            "ghoulies_chapter2c_scene2_1playcam.bnl",
+            "ghoulies_chapter2c_scene3_1playcam.bnl",
+            "ghoulies_chapter2c_scene4_2playcam.bnl",
+            "ghoulies_chapter2c_scene5_1playcam.bnl",
+            "ghoulies_chapter2c_scene6_1playcam.bnl",
+            "ghoulies_chapter2c_scene7_1playcam.bnl",
+            "ghoulies_chapter2c_scene8_1playcam.bnl",
+            "ghoulies_chapter2c_scene9_1playcam.bnl",
+            "ghoulies_chapter3a_scene10_2playcam.bnl",
+            "ghoulies_chapter3a_scene11_1playcam.bnl",
+            "ghoulies_chapter3a_scene12_1playcam.bnl",
+            "ghoulies_chapter3a_scene1_3playcam.bnl",
+            "ghoulies_chapter3a_scene2_1playcam.bnl",
+            "ghoulies_chapter3a_scene3_1playcam.bnl",
+            "ghoulies_chapter3a_scene3_3playcam.bnl",
+            "ghoulies_chapter3a_scene4_1playcam.bnl",
+            "ghoulies_chapter3a_scene5_1playcam.bnl",
+            "ghoulies_chapter3a_scene6_1playcam.bnl",
+            "ghoulies_chapter3a_scene7_1playcam.bnl",
+            "ghoulies_chapter3a_scene8_1playcam.bnl",
+            "ghoulies_chapter3a_scene9_1playcam.bnl",
+            "ghoulies_chapter3b_scene1_1playcam.bnl",
+            "ghoulies_chapter3b_scene2_1playcam.bnl",
+            "ghoulies_chapter3b_scene3_1playcam.bnl",
+            "ghoulies_chapter3b_scene4_2playcam.bnl",
+            "ghoulies_chapter3b_scene5_2playcam.bnl",
+            "ghoulies_chapter3b_scene6_1playcam.bnl",
+            "ghoulies_chapter3b_scene7_1playcam.bnl",
+            "ghoulies_chapter3c_scene10_1playcam.bnl",
+            "ghoulies_chapter3c_scene11_1playcam.bnl",
+            "ghoulies_chapter3c_scene12_1playcam.bnl",
+            "ghoulies_chapter3c_scene13_3playcam.bnl",
+            "ghoulies_chapter3c_scene14_1playcam.bnl",
+            "ghoulies_chapter3c_scene15_1playcam.bnl",
+            "ghoulies_chapter3c_scene15_3playcam.bnl",
+            "ghoulies_chapter3c_scene1_1playcam.bnl",
+            "ghoulies_chapter3c_scene2_1playcam.bnl",
+            "ghoulies_chapter3c_scene3_2playcam.bnl",
+            "ghoulies_chapter3c_scene4_1playcam.bnl",
+            "ghoulies_chapter3c_scene5_1playcam.bnl",
+            "ghoulies_chapter3c_scene6_1playcam.bnl",
+            "ghoulies_chapter3c_scene7_1playcam.bnl",
+            "ghoulies_chapter3c_scene8_1playcam.bnl",
+            "ghoulies_chapter3c_scene9_1playcam.bnl",
+            "ghoulies_chapter4_scene1_1playcam.bnl",
+            "ghoulies_chapter5_scene10_1playcam.bnl",
+            "ghoulies_chapter5_scene11_1playcam.bnl",
+            "ghoulies_chapter5_scene12_1playcam.bnl",
+            "ghoulies_chapter5_scene13_1playcam.bnl",
+            "ghoulies_chapter5_scene13_2playcam.bnl",
+            "ghoulies_chapter5_scene1_1playcam.bnl",
+            "ghoulies_chapter5_scene2_1playcam.bnl",
+            "ghoulies_chapter5_scene3_1playcam.bnl",
+            "ghoulies_chapter5_scene4_1playcam.bnl",
+            "ghoulies_chapter5_scene5_1playcam.bnl",
+            "ghoulies_chapter5_scene6_1playcam.bnl",
+            "ghoulies_chapter5_scene7_1playcam.bnl",
+            "ghoulies_chapter5_scene8_1playcam.bnl",
+            "ghoulies_chapter5_scene9_1playcam.bnl",
+        };
+
         public string[] groupsTypes =
         {
             "Imp", "Skeleton", "Mummy", "Spider", "JessieClyde", "Worm", "Medusa", "Zombie", "Pirate", "HauntedChair", "HauntedPicture", "HauntedCoat", "HauntedTv", "HauntedDoor", "ImpNinja", "ImpFire", "GrimReaper", "MummyCursed", "Warlock", "Chicken", "ChickenVampire", "Hunchback", "Vampire", "PirateCaptain"
@@ -123,6 +253,7 @@ namespace GrabbedRandomizer
                 }
             }
 
+            //await RunMultipleDecompressions(fileNames);
             await BNLDecompress(scriptDirectory + "ghoulies_chapter1_scene1_2playcam.bnl");
             await BNLDecompress(scriptDirectory + "ghoulies_chapter1_scene7_3playcam.bnl");
 
@@ -260,6 +391,13 @@ namespace GrabbedRandomizer
                 string[] strs2 = group.files.Select(e => e.name).ToArray();
                 File.WriteAllLines(Environment.CurrentDirectory + $"/txt/{group.name}.txt", strs2);
             }
+        }
+
+        public async Task RunMultipleDecompressions(IEnumerable<string> paths)
+        {
+            // Use Task.WhenAll to run multiple decompressions in parallel
+            var tasks = paths.Select(path => BNLDecompress(scriptDirectory + path));
+            await Task.WhenAll(tasks);
         }
 
         public async Task BNLDecompress(string path)
